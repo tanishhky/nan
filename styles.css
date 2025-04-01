@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    height: 100vh;
+    cursor: crosshair; /* Fallback cursor in case knife doesn't load */
+}
+
+.game-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    background-color: transparent;
+    box-shadow: 0 0 20px rgba(0, 195, 255, 0.5);
+    border-radius: 10px;
+}
+
+.score-container {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 24px;
+    text-shadow: 0 0 10px rgba(0, 195, 255, 0.8);
+}
+
+.score, .multiplier {
+    margin: 10px;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.music-prompt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 28px;
+    text-align: center;
+    text-shadow: 0 0 10px cyan, 0 0 20px cyan;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px 30px;
+    border-radius: 10px;
+    animation: pulse 1.5s infinite;
+    pointer-events: none;
+}
